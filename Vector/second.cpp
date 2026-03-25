@@ -15,5 +15,18 @@ int main() {
         cout<< *(it) << " ";
     }
     cout<< endl;
+
+    // reverse iterator - rbegin()
+    vector<int>::reverse_iterator itr;
+    for(itr = vec.rbegin(); itr != vec.rend(); itr++) {
+          cout<< *(itr) << " ";
+    }
+    cout << endl;
+    // we can write this in short like this
+    // vector<int>:reverse_iterator = auto C++ automaictally understand we usinf rbegin and rend so we backtrack the vector
+
+    for(auto it = vec.rbegin(); it != vec.rend(); it++) {
+          cout<< *(it) << " ";
+    }
     return 0;
 }
