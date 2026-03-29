@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include<algorithm>
 using namespace std;
 
 int main() {
@@ -28,6 +29,16 @@ int main() {
     for(auto it = vec.rbegin(); it != vec.rend(); it++) {
           cout<< *(it) << " ";
     }
-    cout << "begin " << *(vec.rend() - 1); // ?
+    cout << "begin " << *(vec.rend() - 1) << endl; // ?
+    
+    // max_element(vec.begin(),vec.end()) -> return the Iterator maximum element in vector
+    // mim_element(vec.begin(),vec.end()) -> return the Iterator minimum element in vector
+    cout << *(max_element(vec.begin(), vec.end())) << endl;
+    cout << *(min_element(vec.begin(), vec.end())) << endl;
+
+    cout << binary_search(vec.begin(),vec.end(),30) << endl;
+
+    int n = 15;
+    cout << __builtin_popcount(n) << endl;
     return 0;
 }
